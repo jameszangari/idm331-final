@@ -8,8 +8,7 @@
   "type": "module",
   "main": "index.html",
   "scripts": {
-    "dev": "five-server . -p 8000",
-    "build": "five-server . -p 8000"
+    "dev": "five-server . -p 8000"
   },
   "author": "",
   "license": "ISC",
