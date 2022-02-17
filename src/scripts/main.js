@@ -1,6 +1,5 @@
-import * as THREE from "@/node_modules/three/build/three.module.js";
-// import { GUI } from "../../node_modules/three/examples/jsm/libs/dat.gui.module.js";
-import { OrbitControls } from "@/node_modules/three/examples/jsm/controls/OrbitControls.js";
+import * as THREE from "../../node_modules/three/build/three.module.js"; // import { GUI } from "../../node_modules/three/examples/jsm/libs/dat.gui.module.js";
+import { OrbitControls } from "../../node_modules/three/examples/jsm/controls/OrbitControls.js";
 
 let controls, camera, scene, renderer;
 let textureEquirec, textureCube;
