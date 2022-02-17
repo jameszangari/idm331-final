@@ -1,0 +1,171 @@
+/*------------------------------------*\
+    #FONTS
+\*------------------------------------*/
+/* @import must be at top of file, otherwise CSS will not work */
+/*----------------- #EUCLID -------------------*/
+@font-face {
+	font-family: 'Euclid Circular A';
+	font-weight: 300;
+	src: url('./../fonts/Euclid/EuclidCircularA-Light.woff2') format('woff2'),
+	url('./../fonts/Euclid/EuclidCircularA-Light.woff') format('woff');
+}
+@font-face {
+	font-family: 'Euclid Circular A';
+	font-weight: 400;
+	src: url('./../fonts/Euclid/EuclidCircularA-Regular.woff2') format('woff2'),
+	url('./../fonts/Euclid/EuclidCircularA-Regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'Euclid Circular A';
+	font-weight: 500;
+	src: url('./../fonts/Euclid/EuclidCircularA-Medium.woff2') format('woff2'),
+	url('./../fonts/Euclid/EuclidCircularA-Medium.woff') format('woff');
+}
+@font-face {
+	font-family: 'Euclid Circular A';
+	font-weight: 600;
+	src: url('./../fonts/Euclid/EuclidCircularA-SemiBold.woff2') format('woff2'),
+	url('./../fonts/Euclid/EuclidCircularA-SemiBold.woff') format('woff');
+}
+@font-face {
+	font-family: 'Euclid Circular A';
+	font-weight: 700;
+	src: url('./../fonts/Euclid/EuclidCircularA-Bold.woff2') format('woff2'),
+	url('./../fonts/Euclid/EuclidCircularA-Bold.woff') format('woff');
+}
+
+
+/*------------------------------------*\
+    #BASE_GENERAL
+\*------------------------------------*/
+body {
+    margin: 0 auto;
+}
+.fas {
+    margin-right: 5px;
+}
+.c-controls {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+    background: rgba( 0, 0, 0, 0.75 );
+    border-radius: 5px;
+    padding: 15px;
+    animation: 1s ease-out 0s 1 slideInFromBottom;
+}
+.c-controls__header {
+    font-family: 'Euclid Circular A';
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+}
+.c-controls-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.c-controls__button {
+    margin: 0 auto;
+    display: inline-block;
+    font-family: 'Euclid Circular A';
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 12px 24px;
+    margin-top: 10px;
+    margin-right: 10px;
+    line-height: 1;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    color: #F8F9FA;
+    background: #003459;
+    transition: all .3s ease;
+}
+.c-controls__button:last-child {
+    margin-right: 0;
+}
+.c-controls__button:hover {
+    background: #007EA7;
+}
+#js-gui {
+    position: absolute;
+    right: 0;
+}
+@keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+/*------------------------------------*\
+    #CHECKBOX_STYLES
+\*------------------------------------*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 5px;
+}
+.switch-label {
+    font-family: 'Euclid Circular A';
+    font-size: 16px;
+    font-weight: 500;
+    color: #F8F9FA;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    border-radius: 5px;
+    align-items: center;
+    background: #495057;
+    padding: 8px 18px;
+}
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ADB5BD;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #F8F9FA;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: #00A8E8;
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px #00A8E8;
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}

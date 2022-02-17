@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "three": "^0.137.5"
+  },
+  "name": "idm331",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.html",
+  "scripts": {
+    "dev": "five-server . -p 8000",
+    "build": "five-server . -p 8000"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
